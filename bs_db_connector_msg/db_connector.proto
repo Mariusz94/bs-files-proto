@@ -4,14 +4,14 @@ import "default_msg/default.proto";
 service DbConnectorService {
     rpc GetBalance(UserId) returns (BalanceInfo);
     rpc GetUserInfo(UserId) returns (UserInfo);
-    rpc Login(Login) returns (UserInfo);
+    rpc Login(LoginData) returns (UserInfo);
 }
 
 message UserId {
     string user_id = 1;
 }
 
-message Login {
+message LoginData {
     string login = 1;
     string password = 2;
 }
